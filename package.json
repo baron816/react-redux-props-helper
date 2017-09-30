@@ -1,0 +1,19 @@
+{
+  "name": "react-redux-props-helper",
+  "version": "1.0.0",
+  "description": "Simple module for mapping state and dispatch to React props",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "react-redux-props-helper"
+  },
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "author": "Baron Willeford",
+  "license": "ISC"
+}
