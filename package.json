@@ -2,9 +2,13 @@
   "name": "react-redux-props-helper",
   "version": "1.0.0",
   "description": "Simple module for mapping state and dispatch to React props",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "clean": "rm -rf dist && mkdir dist",
+    "build-module": "babel -d ./dist ./src -s",
+    "build": "npm run clean && npm run build-module",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,21 @@
     "redux"
   ],
   "author": "Baron Willeford",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.0",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "jest": "^21.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0"
+  }
 }
