@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = createEnhanceConnect;
+exports.createEnhancedConnect = createEnhancedConnect;
 
 var _reactRedux = require('react-redux');
 
@@ -55,7 +55,7 @@ function compose() {
 
 var makePropsFromSelectors = compose(makeProps, pick);
 
-function createEnhanceConnect() {
+function createEnhancedConnect() {
   var allSelectors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var allActions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
