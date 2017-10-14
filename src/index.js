@@ -42,7 +42,7 @@ function compose(...fns) {
 
 var makePropsFromSelectors = compose(makeProps, pick);
 
-export default function createEnhanceConnect(
+export function createEnhancedConnect(
   allSelectors = {},
   allActions = {}
 ) {
