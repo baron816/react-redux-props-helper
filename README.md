@@ -3,6 +3,9 @@
 This package provides a simpler way to connect actions and selectors to a
 React component.
 
+## Install
+`npm i -S react-redux-props-helper`
+
 ## Sample Usage
 Use `createEnhancedConnect` by passing it all of your selectors and all of your
 actions. It will return a function that you can use similarly to connect. Just
