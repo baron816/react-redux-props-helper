@@ -1,6 +1,6 @@
 {
   "name": "react-redux-props-helper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple module for mapping state and dispatch to React props",
   "main": "./dist/index.js",
   "scripts": {
@@ -21,9 +21,9 @@
   "author": "Baron Willeford",
   "license": "ISC",
   "dependencies": {
-    "babel-preset-react": "*",
-    "react-redux": "*",
-    "redux": "^2.0.0 || ^3.0.0"
+    "babel-preset-react": "^6.24.1",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

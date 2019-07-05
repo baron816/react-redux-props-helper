@@ -1,4 +1,4 @@
-import createEnhancedConnect from '../src/index.js'
+import { createEnhancedConnect } from '../src/index.js'
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
