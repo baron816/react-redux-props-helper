@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.createEnhancedConnect = createEnhancedConnect;
 
-var _reactRedux = require('react-redux');
+var _reactRedux = require("react-redux");
 
 function makeProps(selectors) {
   return function (state, ownProps) {
@@ -30,7 +30,7 @@ function pick(obj, list) {
 }
 
 function compose() {
-  for (var _len = arguments.length, fns = Array(_len), _key = 0; _key < _len; _key++) {
+  for (var _len = arguments.length, fns = new Array(_len), _key = 0; _key < _len; _key++) {
     fns[_key] = arguments[_key];
   }
 
@@ -48,7 +48,7 @@ function compose() {
 
   return fns.reduce(function (acc, curr) {
     return function () {
-      return acc(curr.apply(undefined, arguments));
+      return acc(curr.apply(void 0, arguments));
     };
   });
 }
@@ -58,16 +58,13 @@ var makePropsFromSelectors = compose(makeProps, pick);
 function createEnhancedConnect() {
   var allSelectors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var allActions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
   return function enhancedConnect(selectorList) {
     var actionList = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-
     return function (component) {
       var mapStateToProps = selectorList.length ? makePropsFromSelectors(allSelectors, selectorList) : function () {
         return {};
       };
       var mapDispatchToProps = actionList.length ? pick(allActions, actionList) : undefined;
-
       return (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(component);
     };
   };
