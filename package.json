@@ -1,6 +1,6 @@
 {
   "name": "react-redux-props-helper",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple module for mapping state and dispatch to React props",
   "main": "./dist/index.js",
   "scripts": {
@@ -20,20 +20,23 @@
   ],
   "author": "Baron Willeford",
   "license": "ISC",
-  "dependencies": {
-    "babel-preset-react": "^6.24.1",
-    "react-redux": "^7.1.0",
-    "redux": "^4.0.1"
-  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-jest": "^21.2.0",
-    "babel-preset-env": "^1.6.0",
-    "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.0.0",
-    "jest": "^21.2.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-test-renderer": "^16.0.0"
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
+    "babel-jest": "^26.6.3",
+    "enzyme": "^3.11.0",
+    "jest": "^26.6.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "*",
+    "react-test-renderer": "^17.0.2",
+    "redux": "^4.0.5"
+  },
+  "peerDependencies": {
+    "react-redux": "^7.2.3",
+    "redux": "^4.0.5"
   }
 }
