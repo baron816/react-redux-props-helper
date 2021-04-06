@@ -4,7 +4,7 @@
   "description": "Simple module for mapping state and dispatch to React props",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
     "clean": "rm -rf dist && mkdir dist",
     "build-module": "babel -d ./dist ./src -s",
     "build": "npm run clean && npm run build-module",
